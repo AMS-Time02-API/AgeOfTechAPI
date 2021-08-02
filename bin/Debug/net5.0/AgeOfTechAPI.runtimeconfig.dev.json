@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Volxy\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Volxy\\.nuget\\packages"
+    ]
+  }
+}
