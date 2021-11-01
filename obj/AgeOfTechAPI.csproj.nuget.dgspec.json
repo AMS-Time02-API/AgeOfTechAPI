@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\ams_S2\\AMS-PROJETO2021\\AgeOfTechAPI\\AgeOfTechAPI.csproj": {}
+    "D:\\Google Drive\\Pessoal\\Cursos\\Programers\\BackEnd\\AMS-PROJETO2021\\AgeOfTechAPI\\AgeOfTechAPI.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\ams_S2\\AMS-PROJETO2021\\AgeOfTechAPI\\AgeOfTechAPI.csproj": {
+    "D:\\Google Drive\\Pessoal\\Cursos\\Programers\\BackEnd\\AMS-PROJETO2021\\AgeOfTechAPI\\AgeOfTechAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\ams_S2\\AMS-PROJETO2021\\AgeOfTechAPI\\AgeOfTechAPI.csproj",
+        "projectUniqueName": "D:\\Google Drive\\Pessoal\\Cursos\\Programers\\BackEnd\\AMS-PROJETO2021\\AgeOfTechAPI\\AgeOfTechAPI.csproj",
         "projectName": "AgeOfTechAPI",
-        "projectPath": "C:\\Projetos\\ams_S2\\AMS-PROJETO2021\\AgeOfTechAPI\\AgeOfTechAPI.csproj",
-        "packagesPath": "C:\\Users\\Volxy\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\ams_S2\\AMS-PROJETO2021\\AgeOfTechAPI\\obj\\",
+        "projectPath": "D:\\Google Drive\\Pessoal\\Cursos\\Programers\\BackEnd\\AMS-PROJETO2021\\AgeOfTechAPI\\AgeOfTechAPI.csproj",
+        "packagesPath": "C:\\Users\\Juninho\\.nuget\\packages\\",
+        "outputPath": "D:\\Google Drive\\Pessoal\\Cursos\\Programers\\BackEnd\\AMS-PROJETO2021\\AgeOfTechAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Volxy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Juninho\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +38,22 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -63,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
         }
       }
     }
