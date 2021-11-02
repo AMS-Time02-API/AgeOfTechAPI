@@ -24,7 +24,7 @@ namespace AgeOfTechAPI.Controllers
 
         [HttpGet]
 
-        public async Task<ActionResult> Get() 
+        public async Task<IActionResult> Get() 
         {
             var entity = await this.Repo.GetAll();
             var results = this.Mapper.Map<ProdutoModel[]>(entity);

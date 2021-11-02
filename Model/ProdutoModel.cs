@@ -6,6 +6,7 @@ namespace AgeOfTechAPI.Model
     public class ProdutoModel : BaseEntity
     {
             public string IdCategoria { get; set; }
+            
             //public Categoria Categoria { get; }
 
             [Column(TypeName = "decimal(18,2)")]

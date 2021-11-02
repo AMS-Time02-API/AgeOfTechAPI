@@ -12,7 +12,7 @@ namespace AgeOfTechAPI.Controllers
     public class CategoriaController : ControllerBase
     {
         public IRepository<Categoria> repo { get; }
-        private readonly IMapper mapper;
+        private  IMapper mapper {get;}
         public CategoriaController(IRepository<Categoria> repo, IMapper mapper)
         {
             this.mapper = mapper;
@@ -25,7 +25,7 @@ namespace AgeOfTechAPI.Controllers
         {
             var entity = await this.repo.GetAll();
             var results = this.mapper.Map<CategoriaModel[]>(entity);
-            return Ok(entity);
+            return Ok(results);
         }
 
         [HttpPost]
