@@ -37,7 +37,7 @@ namespace AgeOfTechAPI.Controllers
             this.repo.Add(cat);
 
             if (await this.repo.SaveChangesAsync())
-                return Created($"api/Categoria/{categoria.Id}", categoria);
+                   return Created($"api/Categoria/{categoria.Id}", categoria);
             return BadRequest();
         }
 
@@ -46,19 +46,18 @@ namespace AgeOfTechAPI.Controllers
         {
             var entity = await this.repo.GetById(id);
             if (entity == null) return NotFound();
-
-            this.mapper.Map(model, entity);
-            this.repo.Update(entity);
+                  this.mapper.Map(model, entity);
+                  this.repo.Update(entity);
+            
             if (await this.repo.SaveChangesAsync())
-                return Created($"/api/categoria/{model.Id}", this.mapper.Map<CategoriaModel>(entity));
+                  return Created($"/api/Categoria/{model.Id}", this.mapper.Map<CategoriaModel>(entity));
 
             return BadRequest();
 
         }
 
         [HttpDelete("{id}")]
-
-        public async Task<IActionResult> delete(string id, CategoriaModel model)
+        public async Task<IActionResult> Delete(string id, CategoriaModel model)
         {
             var entity = await this.repo.GetById(id);
              if (entity == null) return NotFound();
@@ -66,7 +65,7 @@ namespace AgeOfTechAPI.Controllers
             this.repo.Delete();    
 
              if (await this.repo.SaveChangesAsync())
-                return Created($"/api/categoria/{model.Id}", this.mapper.Map<CategoriaModel>(entity));
+                return Created($"/api/Categoria/{model.Id}", this.mapper.Map<CategoriaModel>(entity));
 
             return BadRequest();         
         }

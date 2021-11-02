@@ -1,6 +1,7 @@
 using AgeOfTechAPI.Entities;
 using AgeOfTechAPI.Model;
 using AutoMapper;
+using Model;
 
 namespace AgeOfTechAPI.Mapping
 {
@@ -8,6 +9,9 @@ namespace AgeOfTechAPI.Mapping
     {
         public AutoMapperProfiles()
         {
-            CreateMap<Categoria, CategoriaModel>().ReverseMap();        }
+            CreateMap<Categoria, CategoriaModel>().ReverseMap();   
+            
+            CreateMap<Produto, ProdutoModel>().ReverseMap();        
+        }
     }
 }
