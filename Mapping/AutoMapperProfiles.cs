@@ -13,6 +13,7 @@ namespace AgeOfTechAPI.Mapping
             CreateMap<Produto, ProdutoModel>().ReverseMap();
             CreateMap<Cliente, ClienteModel>().ReverseMap();
             CreateMap<Endereco, EnderecoModel>().ReverseMap();
+            CreateMap<Status, StatusModel>().ReverseMap();
             
         }
     }
