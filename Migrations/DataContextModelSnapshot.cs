@@ -55,10 +55,8 @@ namespace AgeOfTechAPI.Migrations
 
             modelBuilder.Entity("AgeOfTechAPI.Entities.Endereco", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Bairro")
                         .HasColumnType("nvarchar(max)");

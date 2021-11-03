@@ -33,6 +33,7 @@ namespace AgeOfTechAPI.Migrations
                     table.PrimaryKey("PK_Cliente", x => x.Id);
                 });
 
+            /*
             migrationBuilder.CreateTable(
                 name: "Endereco",
                 columns: table => new
@@ -51,6 +52,7 @@ namespace AgeOfTechAPI.Migrations
                 {
                     table.PrimaryKey("PK_Endereco", x => x.Id);
                 });
+            */
 
             migrationBuilder.CreateTable(
                 name: "Produto",
@@ -76,9 +78,9 @@ namespace AgeOfTechAPI.Migrations
             migrationBuilder.DropTable(
                 name: "Cliente");
 
-            migrationBuilder.DropTable(
+        /*    migrationBuilder.DropTable(
                 name: "Endereco");
-
+        */
             migrationBuilder.DropTable(
                 name: "Produto");
         }

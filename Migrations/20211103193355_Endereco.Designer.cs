@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AgeOfTechAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20211027171125_Initial")]
-    partial class Initial
+    [Migration("20211103193355_Endereco")]
+    partial class Endereco
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -55,12 +55,10 @@ namespace AgeOfTechAPI.Migrations
                     b.ToTable("Cliente");
                 });
 
-            /* modelBuilder.Entity("AgeOfTechAPI.Entities.Endereco", b => 
+            modelBuilder.Entity("AgeOfTechAPI.Entities.Endereco", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Bairro")
                         .HasColumnType("nvarchar(max)");
@@ -86,7 +84,7 @@ namespace AgeOfTechAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Endereco");
-                });*/
+                });
 
             modelBuilder.Entity("AgeOfTechAPI.Entities.Produto", b =>
                 {
