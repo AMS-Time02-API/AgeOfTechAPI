@@ -9,6 +9,6 @@ namespace AgeOfTechAPI.Entities
         public Categoria Categoria { get; }
 
         [Column(TypeName = "decimal(18,2)")]
-        public decimal Valor {get; set;} 
+        public  decimal Valor {get; set;} 
     }
 }
