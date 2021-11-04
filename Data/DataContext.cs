@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using AgeOfTechAPI.Entities;
+using Entities;
+
 namespace AgeOfTechAPI.Data
 {
     public class DataContext : DbContext
@@ -11,5 +13,6 @@ namespace AgeOfTechAPI.Data
         public DbSet<Endereco> Endereco { get; set; }
         public DbSet<Produto> Produto { get; set; }
         public DbSet<Status> Status { get; set; }
-    }
+        public DbSet<Pedido> Pedido { get; set; }
+    } 
 }
