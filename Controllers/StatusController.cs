@@ -60,15 +60,15 @@ namespace AgeOfTechAPI.Controllers
 
         [HttpDelete("{id}")]
 
-        public async Task<IActionResult> delete(string id, StatusModel model)
+        public async Task<IActionResult> Delete(string id, StatusModel model)
         {
             var entity = await this.Repo.GetById(id);
              if (entity == null) return NotFound();
-            this.Mapper.Map(model, entity);
-            this.Repo.Delete();    
+                 this.Mapper.Map(model, entity);
+                  this.Repo.Delete(entity);    
 
              if (await this.Repo.SaveChangesAsync())
-                return Created($"/api/status/{model.Id}", this.Mapper.Map<ProdutoModel>(entity));
+                return Created($"/api/status/{model.Id}", this.Mapper.Map<StatusModel>(entity));
 
             return BadRequest();
         

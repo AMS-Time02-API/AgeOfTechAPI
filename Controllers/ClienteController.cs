@@ -61,8 +61,8 @@ namespace Controllers
         {
             var entity = await this.Repo.GetById(id);
              if (entity == null) return NotFound();
-            this.Mapper.Map(model, entity);
-            this.Repo.Delete();    
+                 this.Mapper.Map(model, entity);
+                 this.Repo.Delete(entity);    
 
              if (await this.Repo.SaveChangesAsync())
                 return Created($"/api/Cliente/{model.Id}", this.Mapper.Map<ClienteModel>(entity));

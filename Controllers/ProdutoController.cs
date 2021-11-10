@@ -61,12 +61,12 @@ namespace AgeOfTechAPI.Controllers
 
         [HttpDelete("{id}")]
 
-        public async Task<IActionResult> delete(string id, ProdutoModel model)
+        public async Task<IActionResult> Delete(string id, ProdutoModel model)
         {
             var entity = await this.Repo.GetById(id);
              if (entity == null) return NotFound();
-            this.Mapper.Map(model, entity);
-            this.Repo.Delete();    
+                 this.Mapper.Map(model, entity);
+                 this.Repo.Delete(entity);    
 
              if (await this.Repo.SaveChangesAsync())
                 return Created($"/api/produto/{model.Id}", this.Mapper.Map<ProdutoModel>(entity));

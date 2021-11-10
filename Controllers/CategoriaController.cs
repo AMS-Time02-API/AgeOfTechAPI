@@ -50,8 +50,8 @@ namespace AgeOfTechAPI.Controllers
         {
             var entity = await this.repo.GetById(id);
              if (entity == null) return NotFound();
-            this.mapper.Map(model, entity);
-            this.repo.Delete();    
+                 this.mapper.Map(model, entity);
+                 this.repo.Delete(entity);    
 
              if (await this.repo.SaveChangesAsync())
                 return Created($"/api/categoria/{model.Id}", this.mapper.Map<CategoriaModel>(entity));
