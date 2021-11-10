@@ -14,5 +14,7 @@ namespace AgeOfTechAPI.Data
         public DbSet<Produto> Produto { get; set; }
         public DbSet<Status> Status { get; set; }
         public DbSet<Pedido> Pedido { get; set; }
+        public DbSet<Item> Item { get; set; }
+   
     } 
 }
