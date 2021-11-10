@@ -1,6 +1,7 @@
 using AgeOfTechAPI.Entities;
 using AgeOfTechAPI.Model;
 using AutoMapper;
+using Entities;
 using Model;
 
 namespace AgeOfTechAPI.Mapping
@@ -14,6 +15,7 @@ namespace AgeOfTechAPI.Mapping
             CreateMap<Cliente, ClienteModel>().ReverseMap();
             CreateMap<Endereco, EnderecoModel>().ReverseMap();
             CreateMap<Status, StatusModel>().ReverseMap();
+            CreateMap<Pedido, PedidoModel>().ReverseMap();
             
         }
     }

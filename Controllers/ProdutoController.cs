@@ -23,7 +23,6 @@ namespace AgeOfTechAPI.Controllers
         }
 
         [HttpGet]
-
         public async Task<IActionResult> Get() 
         {
             var entity = await this.Repo.GetAll();
