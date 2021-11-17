@@ -32,7 +32,7 @@ namespace AgeOfTechAPI.Controllers
         {
             var entity = await this.Repo.GetById(CategoriaId);
             var results =this.Mapper.Map<CategoriaModel>(entity);
-            return Ok(results);
+            return Ok(results); 
         }
 
         [HttpPost]
