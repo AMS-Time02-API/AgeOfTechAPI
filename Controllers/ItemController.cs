@@ -28,6 +28,14 @@ namespace Controllers
             return Ok (results);
         }
 
+         [HttpGet("{ItemId}")]
+        public async Task<IActionResult> GetById(string ItemId)
+        {
+            var entity = await this.Repo.GetById(ItemId);
+            var results =this.Mapper.Map<ItemModel>(entity);
+            return Ok(results);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Post(ItemModel itemModel)
         {
@@ -55,19 +63,17 @@ namespace Controllers
         }
 
         [HttpDelete("{id}")]
-
-        public async Task<IActionResult> delete(string id, ItemModel model)
+        public async Task<IActionResult> delete(string id)
         {
             var entity = await this.Repo.GetById(id);
              if (entity == null) return NotFound();
-            this.Mapper.Map(model, entity);
-            this.Repo.Delete();    
+                 
+                 this.Repo.Delete(entity);    
 
              if (await this.Repo.SaveChangesAsync())
-                return Created($"/api/Item/{model.Id}", this.Mapper.Map<ItemModel>(entity));
+                  return Ok();
 
             return BadRequest();
-        
         }
 
 

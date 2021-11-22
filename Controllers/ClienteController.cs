@@ -28,6 +28,14 @@ namespace Controllers
             return Ok(results);
         }
 
+         [HttpGet("{ClienteId}")]
+        public async Task<IActionResult> GetById(string ClienteId)
+        {
+            var entity = await this.Repo.GetById(ClienteId);
+            var results =this.Mapper.Map<ClienteModel>(entity);
+            return Ok(results);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Post(ClienteModel clienteModel)
         {
@@ -55,20 +63,18 @@ namespace Controllers
             return BadRequest();
         }
 
-        [HttpDelete("{id}")]
-
-        public async Task<IActionResult> delete(string id, ClienteModel model)
+       [HttpDelete("{id}")]
+        public async Task<IActionResult> delete(string id)
         {
             var entity = await this.Repo.GetById(id);
              if (entity == null) return NotFound();
-            this.Mapper.Map(model, entity);
-            this.Repo.Delete();    
+                 
+                 this.Repo.Delete(entity);    
 
              if (await this.Repo.SaveChangesAsync())
-                return Created($"/api/Cliente/{model.Id}", this.Mapper.Map<ClienteModel>(entity));
+                  return Ok();
 
             return BadRequest();
-        
         }
     }
 }

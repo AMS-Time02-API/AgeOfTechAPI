@@ -31,6 +31,14 @@ namespace AgeOfTechAPI.Controllers
             return Ok (results);
         }
 
+        [HttpGet("{ProdutoId}")]
+        public async Task<IActionResult> GetById(string ProdutoId)
+        {
+            var entity = await this.Repo.GetById(ProdutoId);
+            var results =this.Mapper.Map<ProdutoModel>(entity);
+            return Ok(results);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Post(ProdutoModel produtoModel)
         {
@@ -60,19 +68,17 @@ namespace AgeOfTechAPI.Controllers
 
 
         [HttpDelete("{id}")]
-
-        public async Task<IActionResult> delete(string id, ProdutoModel model)
+        public async Task<IActionResult> delete(string id)
         {
             var entity = await this.Repo.GetById(id);
              if (entity == null) return NotFound();
-            this.Mapper.Map(model, entity);
-            this.Repo.Delete();    
+                 
+                 this.Repo.Delete(entity);    
 
              if (await this.Repo.SaveChangesAsync())
-                return Created($"/api/produto/{model.Id}", this.Mapper.Map<ProdutoModel>(entity));
+                  return Ok();
 
             return BadRequest();
-        
         }
     }
 }

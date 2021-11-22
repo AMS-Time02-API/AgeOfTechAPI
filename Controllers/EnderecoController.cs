@@ -31,6 +31,14 @@ namespace AgeOfTechAPI.Controllers
             return Ok (results);
         }
 
+        [HttpGet("{EnderecoId}")]
+        public async Task<IActionResult> GetById(string EnderecoId)
+        {
+            var entity = await this.Repo.GetById(EnderecoId);
+            var results =this.Mapper.Map<EnderecoModel>(entity);
+            return Ok(results);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Post(EnderecoModel enderecoModel)
         {
@@ -62,19 +70,18 @@ namespace AgeOfTechAPI.Controllers
             return BadRequest();
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> delete(string id, EnderecoModel model)
+       [HttpDelete("{id}")]
+        public async Task<IActionResult> delete(string id)
         {
             var entity = await this.Repo.GetById(id);
              if (entity == null) return NotFound();
-            this.Mapper.Map(model, entity);
-            this.Repo.Delete();    
+                 
+                 this.Repo.Delete(entity);    
 
              if (await this.Repo.SaveChangesAsync())
-                return Created($"/api/endereco/{model.Id}", this.Mapper.Map<EnderecoModel>(entity));
+                  return Ok();
 
             return BadRequest();
-        
-        }  
+        }
   }
 }

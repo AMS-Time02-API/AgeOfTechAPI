@@ -19,10 +19,12 @@ namespace AgeOfTechAPI.Repository
             this.context.Add(entity);
         }
 
-        public void Delete()
+        public void Delete(T entity)
         {
-            throw new System.NotImplementedException();
-        }
+            
+            this.context.Set<T>().Remove (entity);
+             
+       }
 
         public async Task<IEnumerable<T>> GetAll()
         {
