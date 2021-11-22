@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/usuario/projetos/SEMESTRE_2/AMS-PROJETO2021/AgeOfTechAPI/AgeOfTechAPI.csproj": {}
+    "D:\\Google Drive\\Pessoal\\Cursos\\Programers\\BackEnd\\AMS-PROJETO2021\\AgeOfTechAPI\\AgeOfTechAPI.csproj": {}
   },
   "projects": {
-    "/home/usuario/projetos/SEMESTRE_2/AMS-PROJETO2021/AgeOfTechAPI/AgeOfTechAPI.csproj": {
+    "D:\\Google Drive\\Pessoal\\Cursos\\Programers\\BackEnd\\AMS-PROJETO2021\\AgeOfTechAPI\\AgeOfTechAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/usuario/projetos/SEMESTRE_2/AMS-PROJETO2021/AgeOfTechAPI/AgeOfTechAPI.csproj",
+        "projectUniqueName": "D:\\Google Drive\\Pessoal\\Cursos\\Programers\\BackEnd\\AMS-PROJETO2021\\AgeOfTechAPI\\AgeOfTechAPI.csproj",
         "projectName": "AgeOfTechAPI",
-        "projectPath": "/home/usuario/projetos/SEMESTRE_2/AMS-PROJETO2021/AgeOfTechAPI/AgeOfTechAPI.csproj",
-        "packagesPath": "/home/usuario/.nuget/packages/",
-        "outputPath": "/home/usuario/projetos/SEMESTRE_2/AMS-PROJETO2021/AgeOfTechAPI/obj/",
+        "projectPath": "D:\\Google Drive\\Pessoal\\Cursos\\Programers\\BackEnd\\AMS-PROJETO2021\\AgeOfTechAPI\\AgeOfTechAPI.csproj",
+        "packagesPath": "C:\\Users\\Juninho\\.nuget\\packages\\",
+        "outputPath": "D:\\Google Drive\\Pessoal\\Cursos\\Programers\\BackEnd\\AMS-PROJETO2021\\AgeOfTechAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/usuario/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Juninho\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -77,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
         }
       }
     }
