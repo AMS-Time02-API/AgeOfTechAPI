@@ -17,6 +17,7 @@ namespace AgeOfTechAPI.Mapping
             CreateMap<Status, StatusModel>().ReverseMap();
             CreateMap<Pedido, PedidoModel>().ReverseMap();
             CreateMap<Item, ItemModel>().ReverseMap();
+            CreateMap<Perfil, PerfilModel>().ReverseMap();
             
         }
     }
